@@ -1,0 +1,15 @@
+# 删除旧编译产物（如 .class 文件、缓存、临时资源和旧的插件包）
+.\gradlew clean
+
+
+# 运行 IDE 进行调试 (启动开发环境)
+.\gradlew runIde
+
+
+# 构建插件包 (生成 .zip 文件)
+.\gradlew buildPlugin
+
+
+# 插件安装后测试：
+pycharm64.exe diff F:\02.py F:\01.py
+pycharm64.exe diff F:\02.swift F:\01.swift
