@@ -1,0 +1,30 @@
+<idea-plugin>
+    <id>com.github.iibob.diffcomment</id>
+    <name>Diff Comment Helper</name>
+    <vendor>iibob</vendor>
+    <vendor url="https://github.com/iibob">iibob</vendor>
+    <description>
+        <![CDATA[
+        Enables code commenting directly in Diff views launched via command line, even without starting the full IDE project.
+        <br><br>
+        专为独立差异模式设计：即使不启动完整 IDE，仅通过命令行对比文件时，也能直接在差异视图中启用代码注释功能。
+        ]]>
+    </description>
+    <change-notes>
+        <![CDATA[
+    <ul>
+        <li>Initial release: Support toggling comments in standalone diff views.</li>
+        <li>首次发布：支持在独立的差异对比视图中快速切换注释。</li>
+    </ul>
+    ]]>
+    </change-notes>
+    <depends>com.intellij.modules.platform</depends>
+    <actions>
+        <action id="com.github.iibob.diffcomment.ToggleComment"
+                class="com.github.iibob.diffcomment.DiffCommentAction"
+                text="Toggle Comment">
+            <add-to-group group-id="Diff.EditorPopupMenu" anchor="last"/>
+            <keyboard-shortcut keymap="$default" first-keystroke="control SLASH"/>
+        </action>
+    </actions>
+</idea-plugin>
