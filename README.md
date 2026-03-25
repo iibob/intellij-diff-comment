@@ -18,6 +18,7 @@
 
 ### 1. Marketplace 安装（推荐）
 在 IDE 的 `Settings` > `Plugins` > `Marketplace` 中搜索 **`Diff Comment Helper`** 并安装。
+> [插件地址（官方）](https://plugins.jetbrains.com/plugin/30874-diff-comment-helper)
 
 ### 2. 手动安装
 1. 前往 [GitHub Releases](https://github.com/iibob/intellij-diff-comment/releases) 下载最新 `.zip` 包。
