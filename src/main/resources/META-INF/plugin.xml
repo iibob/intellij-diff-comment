@@ -5,16 +5,16 @@
     <vendor url="https://github.com/iibob">iibob</vendor>
     <description>
         <![CDATA[
-        Enables code commenting directly in Diff views launched via command line, even without starting the full IDE project.
+        Enables code commenting and proper indentation directly in Diff views launched via command line.
         <br><br>
-        专为独立差异模式设计：即使不启动完整 IDE，仅通过命令行对比文件时，也能直接在差异视图中启用代码注释功能。
+        专为独立差异模式设计：即使不启动完整 IDE，仅通过命令行对比文件时，也能在差异视图中启用代码注释及缩进功能。
         ]]>
     </description>
     <change-notes>
         <![CDATA[
     <ul>
-        <li>Initial release: Support toggling comments in standalone diff views.</li>
-        <li>首次发布：支持在独立的差异对比视图中快速切换注释。</li>
+        <li>V1.1.0: Added support for Tab and Shift+Tab indentation in Diff views.</li>
+        <li>V1.1.0: 增加了对差异视图中 Tab 和 Shift+Tab 缩进功能的支持。</li>
     </ul>
     ]]>
     </change-notes>
@@ -25,6 +25,22 @@
                 text="Toggle Comment">
             <add-to-group group-id="Diff.EditorPopupMenu" anchor="last"/>
             <keyboard-shortcut keymap="$default" first-keystroke="control SLASH"/>
+        </action>
+
+        <action id="com.github.iibob.diffcomment.Indent"
+                class="com.github.iibob.diffcomment.DiffIndentAction"
+                text="Indent">
+            <add-to-group group-id="Diff.EditorPopupMenu" anchor="last"/>
+<!--            <keyboard-shortcut keymap="$default" first-keystroke="control CLOSE_BRACKET"/>-->
+            <keyboard-shortcut keymap="$default" first-keystroke="TAB"/>
+        </action>
+
+        <action id="com.github.iibob.diffcomment.Unindent"
+                class="com.github.iibob.diffcomment.DiffUnindentAction"
+                text="Unindent">
+            <add-to-group group-id="Diff.EditorPopupMenu" anchor="last"/>
+<!--            <keyboard-shortcut keymap="$default" first-keystroke="control OPEN_BRACKET"/>-->
+            <keyboard-shortcut keymap="$default" first-keystroke="shift TAB"/>
         </action>
     </actions>
 </idea-plugin>

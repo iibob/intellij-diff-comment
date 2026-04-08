@@ -5,7 +5,7 @@ plugins {
 }
 
 group = "com.github.iibob"
-version = "1.0.1"
+version = "1.1.0"
 
 repositories {
     mavenCentral()
